@@ -1,0 +1,17 @@
+--- include/__config
++++ include/__config
+@@ -296,14 +296,10 @@ typedef __char32_t char32_t;
+ #define _LIBCPP_HAS_C11_FEATURES
+ #elif defined(__linux__)
+ #include <features.h>
+-#if __GLIBC_PREREQ(2, 15)
+ #define _LIBCPP_HAS_QUICK_EXIT
+-#endif
+-#if __GLIBC_PREREQ(2, 17)
+ #define _LIBCPP_HAS_C11_FEATURES
+ #endif
+ #endif
+-#endif
+ 
+ #if (__has_feature(cxx_noexcept))
+ #  define _NOEXCEPT noexcept
